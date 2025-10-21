@@ -3,16 +3,16 @@
 
 import SwiftUI
 
-struct CustomButton: View {
+public struct CustomButton: View {
     private let title: String
     private let action: () -> Void
     
-    init(title: String, action: @escaping () -> Void) {
+    public init(title: String, action: @escaping () -> Void) {
         self.title = title
         self.action = action
     }
     
-    var body: some View {
+    public var body: some View {
         Button(action: action) {
             Text(title)
         }
